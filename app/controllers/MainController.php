@@ -1,17 +1,35 @@
 <?php
-
 namespace app\controllers;
 
-//this is an example controller class, feel free to delete
-class MainController extends Controller {
-
-    public function homepage() {
-        //remember to route relative to index.php
-        //require page and exit to return an HTML page
-        $this->returnView('./assets/views/main/homepage.html');
+class MainController extends Controller
+{
+    public function homepage()
+    {
+        $this->view('main/homepage');
     }
 
-    public function notFound() {
+    public function about()
+    {
+        $this->view('main/about');
     }
 
+    public function contact()
+    {
+        $this->view('main/contact');
+    }
+
+    public function japan()
+    {
+        $this->view('travel/japan');
+    }
+
+    public function turkey()
+    {
+        $this->view('travel/turkey');
+    }
+
+    public function montenegro()
+    {
+        $this->view('travel/montenegro');
+    }
 }
